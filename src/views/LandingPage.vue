@@ -1,29 +1,32 @@
 <script setup>
 import {onMounted, onUnmounted, ref} from 'vue'
-import LandPageButton from '@/components/LandPageButton.vue';
-import icons from '@/components/icons';
+import {LandPageButton, icons} from '@/components';
 
 const hours = ref(0);
 const minutes = ref(0);
 const seconds = ref(0);
 const formattedTime = ref(0);
 
-const month = ref(0);
-const day = ref(0);
-const year = ref(0);
-const formattedDate = ref(0);
-
 let interval;
 
+// function to update time per second
 function updateTime(){
   const date = new Date();
 
+  //add a 0 at the start if the  time value is less than 10 to keep a 2 digit format
   hours.value = String(date.getHours()).padStart(2, '0');
   minutes.value = String(date.getMinutes()).padStart(2, '0');
   seconds.value = String(date.getSeconds()).padStart(2, '0');
 
   formattedTime.value = `${hours.value}:${minutes.value}:${seconds.value}`;
 }
+
+const month = ref(0);
+const day = ref(0);
+const year = ref(0);
+const formattedDate = ref(0);
+
+// function to update the date
 function updateDate(){
   const date = new Date();
 
@@ -33,16 +36,21 @@ function updateDate(){
 
   formattedDate.value = `${month.value} ${day.value}, ${year.value}`;
 }
+
+// run the functions as soon as this component mounts
 onMounted(()=>{
     updateTime();
     updateDate();
 
+    // can't access the html element in scoped styling, so did it here instead
     document.documentElement.style.overflow = 'hidden';
 
+    // interal to update the time per second
     interval = setInterval(updateTime,1000);
   })
 
   onUnmounted(()=>{
+    // clean the styling and event listeners when component unmounts
     document.documentElement.style.overflow = '';
     clearInterval(interval);
   })
@@ -51,6 +59,7 @@ onMounted(()=>{
 </script>
 
 <template>
+  <!-- left part where the colorful background is -->
   <div id="left">
     <img src="@/assets/Ellipse 1.svg" alt="" id="ellipse-1">
     <img src="@/assets/Ellipse 4.svg" alt="" id="ellipse-4">
@@ -63,6 +72,8 @@ onMounted(()=>{
         Compliance to Environment Standards</p>
     </div>
   </div>
+
+  <!-- right part of the page where the buttons are located -->
   <div id="right">
     <div id="right-header-top">
       <h1 class="header-top">
@@ -80,6 +91,7 @@ onMounted(()=>{
       <p class="header-bottom">{{formattedDate}}</p>
     </div>
     <div id="buttons-first-row">
+      <!-- each button is a component that takes a props for the icon and name of the button -->
       <LandPageButton :icon="icons.dashboard" name="Dashboard"/>
       <LandPageButton :icon="icons.approvalManagement" name="Approval Management"/>
       <LandPageButton :icon="icons.transactions" name="Transactions Log Book"/>
@@ -111,7 +123,9 @@ onMounted(()=>{
       </div>
       <div id="buttons-fourth-row-right">
         <LandPageButton :icon="icons.personWithGears" name="Administration Settings"/>
-        <div id="logout"><i class="fa-solid fa-right-from-bracket"></i></div>
+
+        <!-- not the actual link of the button, just need something to return to the website -->
+        <router-link to="/"><div id="logout"><img src="@/assets/Logout.svg" alt="" id="logout-icon"></div></router-link>
       </div>
     </div>
   </div>
@@ -123,8 +137,8 @@ onMounted(()=>{
 }
 
 #left{
-  height: 100vh;   /* (1080 / 1080) * 100 */
-  top: 0.09vh;     /* (1 / 1080) * 100 */
+  height: 100vh;  
+  top: 0.09vh;   
 
   background-image: url('@/assets/landpage-gradient.svg');
   background-repeat: no-repeat;
@@ -133,41 +147,41 @@ onMounted(()=>{
 
 #ellipse-1 {
   position: absolute;
-  width: 72.5vw; /* 1393 / 1920 * 100 */
-  height: 128.98vh; /* 1393 / 1080 * 100 */
-  top: -47.22vh; /* -510 / 1080 * 100 */
-  left: -9.38vw; /* -180 / 1920 * 100 */
+  width: 72.5vw; 
+  height: 128.98vh;
+  top: -47.22vh; 
+  left: -9.38vw; 
 }
 #ellipse-3 {
   position: absolute;
-  width: 13.18vw; /* 253 / 1920 * 100 */
-  height: 23.43vh; /* 253 / 1080 * 100 */
-  top: 79.81vh; /* 754 / 1080 * 100 */
-  left: 21.88vw; /* 420 / 1920 * 100 */
+  width: 13.18vw; 
+  height: 23.43vh;
+  top: 79.81vh; 
+  left: 21.88vw; 
 }
 
 #ellipse-4 {
   position: fixed;
-  width: 21.88vw; /* 420 / 1920 * 100 */
-  height: 38.89vh; /* 420 / 1080 * 100 */
-  top: -13.80vh; /* -149 / 1080 * 100 */
-  left: 14.94vw; /* 287 / 1920 * 100 */
+  width: 21.88vw;
+  height: 38.89vh; 
+  top: -13.80vh;
+  left: 14.94vw; 
   z-index: 999;
 }
 
 #logo{
   position: absolute;
-  width: 7.19vw; /* 138 / 1920 * 100 */
-  height: 12.96vh; /* 140 / 1080 * 100 */
-  top: 14.72vh; /* 159 / 1080 * 100 */
-  left: 2.62vw; /* 83 / 1920 * 100 */
+  width: 7.19vw; 
+  height: 12.96vh;
+  top: 14.72vh; 
+  left: 2.62vw; 
   z-index: 2;
 }
 #pisces{
-  width: 14.11vw; /* (271 / 1920) * 100 */
+  width: 14.11vw; 
   position: absolute;
-  top: 28.77vh; /* (261 / 1080) * 100 */
-  left: 3.38vw; /* Already in vw, no change needed */
+  top: 28.77vh; 
+  left: 3.38vw; 
 
 }
 /* #pisces{
@@ -192,26 +206,25 @@ onMounted(()=>{
 } */
 #pisces-definition{
   font-family: 'Roboto',sans-serif;
-  width: 23.75vw; /* 456 / 1920 * 100 */
-  height: 11.11vh; /* 120 / 1080 * 100 */
+  width: 23.75vw; 
+  height: 11.11vh;
   position: absolute;
-  top: 37.37vh; /* 382 / 1080 * 100 */
-  left:3.38vw; /* 84 / 1920 * 100 */
+  top: 37.37vh; 
+  left:3.38vw;
   
-  font-size: 1.62vw; /* 35 / 1920 * 100 */
-  line-height: 3.66vh; /* 39.5 / 1080 * 100 */
+  font-size: 1.62vw;
+  line-height: 3.66vh; 
   font-weight: 100;
   
   color: #ffffff;
-
 }
 
 #right {
   position: fixed;
   top: 0;
-  left: 27.4vw; /* Instead of a fixed 550px */
-  width: 72.6vw; /* Instead of a fixed 1270px */
-  height: 100vh; /* Full viewport height */
+  left: 27.4vw;
+  width: 72.6vw; 
+  height: 100vh; 
   background-color: #eff0f4;
   padding: 2% 7% 2% 7%;
 }
@@ -252,11 +265,11 @@ onMounted(()=>{
 
 #buttons-first-row {
   display: flex;
-  gap: 1.04vw; /* 20px */
+  gap: 1.04vw;
   justify-content: space-between;
   margin-top: 2vh;
   padding: 1vh 0.2vw 5vh 0.2vw;
-  height: 18.67vh; /* 180px */
+  height: 18.67vh; 
 }
 
 #buttons-second-row {
@@ -265,7 +278,7 @@ onMounted(()=>{
   justify-content: space-between;
   margin-top: -3vh;
   padding: 0 0.2vw 5vh 0.2vw;
-  height: 15.89vh; /* 150px */
+  height: 15.89vh; 
 }
 
 #buttons-third-row {
@@ -279,7 +292,7 @@ onMounted(()=>{
   display: flex;
   gap: 1.04vw;
   width: 49.5%;
-  height: 39.33vh; /* 360px */
+  height: 39.33vh;
   padding: 0 0.2vw 5vh 0.2vw;
   flex-shrink: 0;
   flex: 1;
@@ -294,7 +307,7 @@ onMounted(()=>{
 #buttons-third-row-right-left {
   display: flex;
   flex-direction: column;
-  gap: 1.85vh; /* 20px */
+  gap: 1.85vh;
   width: 50%;
   height: 39.33vh;
   padding: 0 0.2vw 5vh 0.2vw;
@@ -330,9 +343,10 @@ onMounted(()=>{
 
 #logout {
   background-color: #c0c5c8;
-  border-radius: 0.63vw; /* 12px */
-  padding: 1.85vh; /* 20px */
-  width: 7.81vw; /* 150px */
+  border-radius: 0.63vw;
+  padding: 1.85vh;
+  width: 7.81vw; 
+  height: 100%;
   
   display: flex;
   justify-content: center;
@@ -342,4 +356,3 @@ onMounted(()=>{
   background-color: #5c5f66;
 }
 </style>
-
