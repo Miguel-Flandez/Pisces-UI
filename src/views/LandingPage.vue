@@ -1,6 +1,6 @@
 <script setup>
 import {onMounted, onUnmounted, ref} from 'vue'
-import {LandPageButton, icons} from '@/components';
+import {LandPageButton, icons, SplashScreen1} from '@/components';
 
 const hours = ref(0);
 const minutes = ref(0);
@@ -59,6 +59,7 @@ onMounted(()=>{
 </script>
 
 <template>
+  <SplashScreen1/>
   <!-- left part where the colorful background is -->
   <div id="left">
     <img src="@/assets/Ellipse 1.svg" alt="" id="ellipse-1">

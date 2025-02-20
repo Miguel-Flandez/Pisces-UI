@@ -1,9 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import LandingPage from '@/views/LandingPage.vue'
-import Home from '@/views/Home.vue'
-import Feedback from '@/views/Feedback.vue'
-import Chemical_Import_Tool from '@/views/Chemical_Import_Tool.vue'
-import Establishment_Registration from '@/views/Establishment_Registration.vue'
+
+import { Home, Chemical_Import_Tool, Establishment_Registration, Feedback, BulletinBoard, LandingPage } from '@/views';
+
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -12,16 +10,6 @@ const router = createRouter({
       path: '/',
       name: 'home',
       component: Home,
-    },
-    {
-      path: '/landing-page',
-      name: 'landing page',
-      component: LandingPage,
-    },
-    {
-      path: '/feedback',
-      name: 'feedback form',
-      component: Feedback,
     },
     {
       path: '/chemical importation tool',
@@ -33,9 +21,21 @@ const router = createRouter({
       name: 'establishment registration',
       component: Establishment_Registration,
     },
-    
-    
-    
+    {
+      path: '/feedback',
+      name: 'feedback form',
+      component: Feedback,
+    },
+    {
+      path: '/bulletin board',
+      name: 'bulletin board',
+      component: BulletinBoard,
+    },
+    {
+      path: '/landing-page',
+      name: 'landing page',
+      component: LandingPage,
+    },
   ],
 })
 

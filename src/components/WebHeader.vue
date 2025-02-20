@@ -4,7 +4,7 @@
     <router-link to="/chemical importation tool"><button class="header-links">Chemical Importation Tool</button></router-link>
     <router-link to="/establishment registration"><button class="header-links">Establishment Registration</button></router-link>
     <router-link to="/feedback"><button class="header-links">Feedback</button></router-link>
-    <button class="header-links">Bulletin Board</button>
+    <router-link to="/bulletin board"><button class="header-links">Bulletin Board</button></router-link>
     <button class="header-links">Downloads</button>
     <router-link to="/landing-page"><button class="login">Login</button></router-link>
   </header>
