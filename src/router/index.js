@@ -1,7 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-import { Home, Chemical_Import_Tool, Establishment_Registration, Feedback, BulletinBoard, LandingPage } from '@/views';
-
+import { Home, Chemical_Import_Tool, Establishment_Registration, Feedback, BulletinBoard, Downloads, LandingPage } from '@/views';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -30,6 +29,11 @@ const router = createRouter({
       path: '/bulletin board',
       name: 'bulletin board',
       component: BulletinBoard,
+    },
+    {
+      path: '/downloads',
+      name: 'downloads',
+      component: Downloads,
     },
     {
       path: '/landing-page',
