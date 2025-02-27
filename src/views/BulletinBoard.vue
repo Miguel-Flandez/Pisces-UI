@@ -21,6 +21,12 @@ import placeholder from '@/assets/placeholder.svg'
             </h2>
             <div id="card-container">
                 <BulletinCard :img="placeholder" title="Update on Philippine Drug Enforcement Agency (PDEA) Compliance Service Process" description="Through PEZA Memorandum Circular (MC) # 2021-048, the implementation of the..."/>
+                <BulletinCard :img="placeholder" title="Update on Philippine Drug Enforcement Agency (PDEA) Compliance Service Process" description="Through PEZA Memorandum Circular (MC) # 2021-048, the implementation of the..."/>
+                <BulletinCard :img="placeholder" title="Update on Philippine Drug Enforcement Agency (PDEA) Compliance Service Process" description="Through PEZA Memorandum Circular (MC) # 2021-048, the implementation of the..."/>
+                <BulletinCard :img="placeholder" title="Update on Philippine Drug Enforcement Agency (PDEA) Compliance Service Process" description="Through PEZA Memorandum Circular (MC) # 2021-048, the implementation of the..."/>
+                <BulletinCard :img="placeholder" title="Update on Philippine Drug Enforcement Agency (PDEA) Compliance Service Process" description="Through PEZA Memorandum Circular (MC) # 2021-048, the implementation of the..."/>
+                <BulletinCard :img="placeholder" title="Update on Philippine Drug Enforcement Agency (PDEA) Compliance Service Process" description="Through PEZA Memorandum Circular (MC) # 2021-048, the implementation of the..."/>
+                <BulletinCard :img="placeholder" title="Update on Philippine Drug Enforcement Agency (PDEA) Compliance Service Process" description="Through PEZA Memorandum Circular (MC) # 2021-048, the implementation of the..."/>
             </div>
             
         </div>
@@ -30,73 +36,75 @@ import placeholder from '@/assets/placeholder.svg'
 </template>
 
 <style scoped>
-#container{
+#container {
     height: 100vh;
-    width: 100%;
+    width: 100vw;
     background-image: url(@/assets/Gradient.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
 }
+
 /* Breadcrumb */
-#breadcrumb{
+#breadcrumb {
     display: flex;
     position: absolute;
-    top: 134px;
-    left: 64px;
-    gap: 15px;
+    top: 13vh;
+    left: 5vw;
+    gap: 1vw;
     cursor: pointer;
 }
-#home,#splitter,#bulletin{
+
+#home, #splitter, #bulletin {
     font-family: 'Helvetica', sans-serif;
     font-weight: 300;
-    font-size: 16px;
-    line-height: 16px;
+    font-size: 1.6vh;
+    line-height: 1.6vh;
 }
-#home, #splitter{
+
+#home, #splitter {
     color: #9ca3af;
 }
-#home:hover{
+
+#home:hover {
     color: #0044c7;
 }
 
-#bulletin{
-    color:#25578f;
+#bulletin {
+    color: #25578f;
 }
-#bulletin-container{
-    position: absolute;
-    top: 192px;
-    left: 47px;
 
-    width: 95%;
-    height: 85%;
-    border: 1px;
-    border-radius: 20px;
+#bulletin-container {
+    position: absolute;
+    top: 18vh;
+    left: 3vw;
+
+    width: 94vw;
+    height: 82vh;
+    border-radius: 2vh;
     background-color: #ffffff;
 
-    padding: 2%;
-
+    padding: 5vh;
     overflow-y: auto;
 }
-#bulletin-board{
-    font-family: 'Helvetica', sans-serif;
 
+#bulletin-board {
+    font-family: 'Helvetica', sans-serif;
     background: linear-gradient(to right, #002161, #0044c7);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
     font-weight: 700;
-    font-size: 36px;
-    line-height: 36px;
+    font-size: 3.6vh;
+    line-height: 3.6vh;
+    margin-bottom: 30px;
 }
 
-#card-container{
+#card-container {
     display: flex;
-    gap: 35px;
-
+    gap: 1.5vw;
     flex-wrap: wrap;
-
-    margin: 2% auto;
+    margin: 2vh auto;
 }
 </style>
