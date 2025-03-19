@@ -19,6 +19,7 @@ function updateTime(){
   seconds.value = String(date.getSeconds()).padStart(2, '0');
 
   formattedTime.value = `${hours.value}:${minutes.value}:${seconds.value}`;
+  
 }
 
 const month = ref(0);
@@ -47,6 +48,8 @@ onMounted(()=>{
 
     // interal to update the time per second
     interval = setInterval(updateTime,1000);
+    window.scrollTo(0, 0);
+
   })
 
   onUnmounted(()=>{
