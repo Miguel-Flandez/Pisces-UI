@@ -6,7 +6,7 @@
     <router-link to="/feedback"><button class="header-links">Feedback</button></router-link>
     <router-link to="/bulletin board"><button class="header-links">Bulletin Board</button></router-link>
     <router-link to="/downloads"><button class="header-links">Downloads</button></router-link>
-    <router-link to="/landing-page"><button class="login">Login</button></router-link>
+    <router-link to="/login"><button class="login">Login</button></router-link>
   </header>
 </template>
 

@@ -5,6 +5,11 @@ import Feedback from './Feedback.vue';
 import BulletinBoard from './BulletinBoard.vue';
 import Downloads from './Downloads.vue';
 import LandingPage from './LandingPage.vue';
+import Login from './Login.vue';
+import ForgotPassword from './ForgotPassword.vue';
+import ResetPassword from './ResetPassword.vue';
+import SetupPassword from './SetupPassword.vue';
+
 
 
 export { 
@@ -14,5 +19,9 @@ export {
   Feedback, 
   BulletinBoard, 
   Downloads,
+  Login,
+  ForgotPassword,
+  ResetPassword,
+  SetupPassword,
   LandingPage 
 };

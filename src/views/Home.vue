@@ -11,7 +11,7 @@ import {WebHeader, WebFooter, SplashScreen1} from '@/components';
   <div class="body-elements">
     <img src="@/assets/Pisces + Description.svg" alt="pisces" class="pisces">
     <img src="@/assets/EHS.svg" alt="EHS" class="ehs">
-    <button class="get-started-button"><span class="get-started">Get Started</span></button>
+    <router-link to="/landing-page"><button class="get-started-button"><span class="get-started">Get Started</span></button></router-link>
   </div>
 
   <!-- Footer Component for Webpage -->

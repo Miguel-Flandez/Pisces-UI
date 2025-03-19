@@ -1,6 +1,7 @@
+
 import { createRouter, createWebHistory } from 'vue-router'
 
-import { Home, Chemical_Import_Tool, Establishment_Registration, Feedback, BulletinBoard, Downloads, LandingPage } from '@/views';
+import { Home, Chemical_Import_Tool, Establishment_Registration, Feedback, BulletinBoard, Downloads, Login, ForgotPassword, ResetPassword, SetupPassword, LandingPage } from '@/views';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -34,6 +35,26 @@ const router = createRouter({
       path: '/downloads',
       name: 'downloads',
       component: Downloads,
+    },
+    {
+      path :'/login',
+      name: 'login',
+      component: Login,
+    },
+    {
+      path: '/forgot-password',
+      name: 'forgot-password',
+      component: ForgotPassword,
+    },
+    {
+      path: '/reset-password',
+      name: 'reset-password',
+      component: ResetPassword,
+    },
+    {
+      path: '/setup-password',
+      name: 'setup-password',
+      component: SetupPassword,
     },
     {
       path: '/landing-page',
