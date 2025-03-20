@@ -96,37 +96,37 @@ onMounted(()=>{
     </div>
     <div id="buttons-first-row">
       <!-- each button is a component that takes a props for the icon and name of the button -->
-      <LandPageButton :icon="icons.dashboard" name="Dashboard"/>
-      <LandPageButton :icon="icons.approvalManagement" name="Approval Management"/>
-      <LandPageButton :icon="icons.transactions" name="Transactions Log Book"/>
+      <LandPageButton :icon="icons.dashboard" className="landpage-button" name="Dashboard"/>
+      <LandPageButton :icon="icons.approvalManagement" className="landpage-button" name="Approval Management"/>
+      <LandPageButton :icon="icons.transactions" className="landpage-button" name="Transactions Log Book"/>
     </div>
     <div id="buttons-second-row">
-      <LandPageButton :icon="icons.registeredEstablishment" name="Registered Establishment"/>
-      <LandPageButton :icon="icons.personWithGears" name="Compliance Monitoring"/>
+      <LandPageButton :icon="icons.registeredEstablishment" className="landpage-button" name="Registered Establishment"/>
+      <LandPageButton :icon="icons.personWithGears" className="landpage-button" name="Compliance Monitoring"/>
     </div>
     <div id="buttons-third-row">
       <div id="buttons-third-row-left">
-        <LandPageButton :icon="icons.personWithGears" name="Application Certification"/>
-        <LandPageButton :icon="icons.permits" name="Permits"/>
+        <LandPageButton :icon="icons.personWithGears" className="landpage-button" name="Application Certification"/>
+        <LandPageButton :icon="icons.permits" className="landpage-button" name="Permits"/>
       </div>
       <div id="buttons-third-row-right">
         <div id="buttons-third-row-right-left">
-          <LandPageButton :icon="icons.paper" name="Application Registration RWH"/>
-          <LandPageButton :icon="icons.paper" name="Application Exit Residual Waste"/>
+          <LandPageButton :icon="icons.paper" className="landpage-button" name="Application Registration RWH"/>
+          <LandPageButton :icon="icons.paper" className="landpage-button" name="Application Exit Residual Waste"/>
         </div>
         <div id="buttons-third-row-right-right">
-          <LandPageButton :icon="icons.paper" name="Application Exit Hazardous Waste"/>
-          <LandPageButton :icon="icons.personWithGears" name="Chemical Importation Evaluation"/>
+          <LandPageButton :icon="icons.paper" className="landpage-button" name="Application Exit Hazardous Waste"/>
+          <LandPageButton :icon="icons.personWithGears" className="landpage-button" name="Chemical Importation Evaluation"/>
 
         </div>
       </div>
     </div>
     <div id="buttons-fourth-row">
       <div id="buttons-fourth-row-left">
-        <LandPageButton :icon="icons.personWithGears" name="Request Endorsement LLDA/DENR/EMB"/>
+        <LandPageButton :icon="icons.personWithGears" className="landpage-button" name="Request Endorsement LLDA/DENR/EMB"/>
       </div>
       <div id="buttons-fourth-row-right">
-        <LandPageButton :icon="icons.personWithGears" name="Administration Settings"/>
+        <LandPageButton :icon="icons.personWithGears" className="landpage-button" name="Administration Settings"/>
 
         <!-- not the actual link of the button, just need something to return to the website -->
         <router-link to="/"><div id="logout"><img src="@/assets/Logout.svg" alt="" id="logout-icon"></div></router-link>
@@ -343,6 +343,10 @@ onMounted(()=>{
   gap: 1.04vw;
   padding: 0 0 5vh 0;
   flex: 1;
+}
+.landpage-button:hover{
+    background: linear-gradient(to right, #002161, #0044c7);
+    cursor: pointer;
 }
 
 #logout {

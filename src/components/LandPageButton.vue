@@ -43,11 +43,8 @@ const props = defineProps({
     overflow-x: hidden;
 }
 
-#button:hover{
-    background: linear-gradient(to right, #002161, #0044c7);
-    cursor: pointer;
-}
+    
 #button:hover .name{
     color: #f5f8ff;
-}
+} 
 </style>
