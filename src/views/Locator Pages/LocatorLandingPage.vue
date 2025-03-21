@@ -84,8 +84,8 @@ onMounted(()=>{
   top: 0.09vh;   
 
   background-image: url('@/assets/LocatorLandingPagebg.png');
-  background-repeat: no-repeat;
-  background-size: contain;
+  background-repeat:no-repeat;
+  background-size: cover;
 }
 
 #ellipse-1 {
