@@ -1,4 +1,11 @@
 
+// 6. import your page at the top
+// 7. export your page at the bottom, the path is the name of the page on the address bar of the browser, I dont know what name does but better match it,
+// the component should be the same as what you imported
+// 8. if you want to make a button to redirect to another page, use this example: 
+// <router-link to="/chemical importation tool"><button class="header-links">Chemical Importation Tool</button></router-link>
+// 9. make use of comments to distinguish and organize your code so other people can understand what is going on
+
 import { createRouter, createWebHistory } from 'vue-router'
 
 // Login
@@ -7,6 +14,8 @@ import {Login, ForgotPassword, ResetPassword, SetupPassword} from '@/views';
 import { Home, Chemical_Import_Tool, Establishment_Registration, Feedback, BulletinBoard, Downloads, LandingPage} from '@/views';
 // Locator Imports
 import {LocatorLandingPage} from '@/views';
+// import here
+
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),

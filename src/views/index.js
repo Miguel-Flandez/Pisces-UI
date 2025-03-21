@@ -1,3 +1,8 @@
+// 3. at the top, import your page, use the other imports as reference
+// 4. at the the bottom, export your page
+// 5. go to the router/index.js file
+
+
 // User Imports
 import Home from './User Pages/Home.vue';
 import Chemical_Import_Tool from './User Pages/Chemical_Import_Tool.vue';
@@ -13,11 +18,12 @@ import SetupPassword from './Login/SetupPassword.vue';
 
 // Locator Imports
 import LocatorLandingPage from './Locator Pages/LocatorLandingPage.vue';
+// import here
 
 
-
+// export here
 export { 
-  // User Imports
+  // User Exports
   Home, 
   Chemical_Import_Tool, 
   Establishment_Registration, 
@@ -30,6 +36,6 @@ export {
   SetupPassword,
   LandingPage,
 
-  // Locator Imports
+  // Locator Exports
   LocatorLandingPage,
 };
