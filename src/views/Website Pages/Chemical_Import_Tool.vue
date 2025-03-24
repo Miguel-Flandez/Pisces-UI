@@ -1,6 +1,6 @@
 <script setup>
-import WebFooter from '@/components/WebFooter.vue';
-import WebHeader from '@/components/WebHeader.vue';
+import WebFooter from '@/components/Website Components/WebFooter.vue';
+import WebHeader from '@/components/Website Components/WebHeader.vue';
 import { ref } from 'vue';
 
 // Reactive variable to hold the search query

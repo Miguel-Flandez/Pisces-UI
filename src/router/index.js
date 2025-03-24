@@ -15,6 +15,8 @@ import { Home, Chemical_Import_Tool, Establishment_Registration, Feedback, Bulle
 // Locator Imports
 import {LocatorLandingPage} from '@/views';
 // import here
+import { ProjectCoverage } from '@/views';
+
 
 
 const router = createRouter({
@@ -64,6 +66,14 @@ const router = createRouter({
       name: 'locator landing page',
       component: LocatorLandingPage,
     },
+
+    // Project Coverage
+    {
+      path: '/project-coverage',
+      name: 'project coverage',
+      component: ProjectCoverage,
+    },
+
 
 
     // Login
