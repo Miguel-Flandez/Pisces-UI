@@ -296,7 +296,7 @@ onMounted(()=>{
   display: flex;
   gap: 1.04vw;
   width: 49.5%;
-  height: 32.33vh;
+  height: 39.33vh;
   padding: 0 0.2vw 5vh 0.2vw;
   flex-shrink: 0;
   flex: 1;
@@ -313,7 +313,7 @@ onMounted(()=>{
   flex-direction: column;
   gap: 1.85vh;
   width: 50%;
-  height: 32.33vh;
+  height: 39.33vh;
   padding: 0 0.2vw 5vh 0.2vw;
 }
 
@@ -322,7 +322,7 @@ onMounted(()=>{
   flex-direction: column;
   gap: 1.85vh;
   width: 50%;
-  height: 32.33vh;
+  height: 39.33vh;
   padding: 0 0.2vw 5vh 0.2vw;
 }
 

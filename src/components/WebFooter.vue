@@ -40,10 +40,11 @@ Online Environment Corner</h3>
 <style scoped>
   .footer {
     width: 100%;
-    padding: 5.93vh 1.67vw 4% 8.33vw; 
-    gap: 3.91vw; 
+    padding: 3% 1.67% 4% 8.33%; 
+    gap: 5%; 
     background-color: #111827;
     display: flex;
+
   }
 
   .footer-left p {
